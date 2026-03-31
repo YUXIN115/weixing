@@ -88,7 +88,7 @@ with tab1:
 
 
         # 多边形绘制工具（修复无法圈选障碍物问题）
-        draw = Draw(
+    draw = Draw(
             draw_options={
                 "polygon": {
                     "shapeOptions": {
