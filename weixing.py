@@ -78,12 +78,13 @@ with tab1:
         st.subheader("🗺️ 卫星地图 (OpenStreetMap)")
         
         # 初始化地图（南京科技职业学院校内，高德卫星瓦片，解决空白问题）
-m = folium.Map(
-    location=[32.2341, 118.7494], 
-    zoom_start=18,  
+    m = folium.Map(
+    location=[32.2341, 118.7494],
+    zoom_start=18,
     tiles="https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
     attr="© 高德地图 | © OpenStreetMap contributors"
 )
+
 
 
         # 多边形绘制工具（修复无法圈选障碍物问题）
