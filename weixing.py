@@ -143,10 +143,10 @@ with tab1:
         ).add_to(m)
 
         # 渲染地图（固定key，避免闪烁）
-        map_data = st_folium(m, width=800, height=650, key="fixed_map_key")
+    map_data = st_folium(m, width=800, height=650, key="fixed_map_key")
 
         # 监听绘制事件，添加障碍物（解决圈选后消失问题）
-        if map_data and map_data.get("last_active_drawing"):
+    if map_data and map_data.get("last_active_drawing"):
             drawing = map_data["last_active_drawing"]
             if drawing["geometry"]["type"] == "Polygon":
                 coords = [(lat, lng) for lng, lat in drawing["geometry"]["coordinates"][0]]
@@ -156,7 +156,7 @@ with tab1:
                     "create_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 }
                 # 避免重复添加
-                if new_obs not in st.session_state.obstacles:
+            if new_obs not in st.session_state.obstacles:
                     st.session_state.obstacles.append(new_obs)
 
     # 右侧：控制面板（A/B点分开确认+障碍物管理）
