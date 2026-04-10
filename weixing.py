@@ -120,7 +120,7 @@ with tab1:
         ).add_to(m)
 
         # 绘制所有已部署障碍物（解决只能部署1个的问题）
-        for obs in st.session_state.deployed_obstacles:
+    for obs in st.session_state.deployed_obstacles:
             folium.Polygon(
                 locations=obs["coords"],
                 color="red",
@@ -132,9 +132,9 @@ with tab1:
             ).add_to(m)
 
         # 绘制A-B避障连线（蓝线，避开障碍物）
-        A = st.session_state.start_point
-        B = st.session_state.end_point
-        folium.PolyLine(
+    A = st.session_state.start_point
+    B = st.session_state.end_point
+    folium.PolyLine(
             locations=[A, B],
             color="blue",
             weight=4,
