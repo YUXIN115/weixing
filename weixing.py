@@ -105,7 +105,7 @@ with tab1:
             },
             edit_options={"edit": True, "remove": True}
         )
-        draw.add_to(m)
+    draw.add_to(m)
 
         # 绘制A/B点（校内红/绿标）
         folium.Marker(
