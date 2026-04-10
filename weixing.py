@@ -113,7 +113,7 @@ with tab1:
             popup="A点（起点，校内）",
             icon=folium.Icon(color="red", icon="location-dot")
         ).add_to(m)
-        folium.Marker(
+    folium.Marker(
             location=st.session_state.end_point,
             popup="B点（终点，校内）",
             icon=folium.Icon(color="green", icon="location-dot")
