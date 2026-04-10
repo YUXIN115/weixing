@@ -108,7 +108,7 @@ with tab1:
     draw.add_to(m)
 
         # 绘制A/B点（校内红/绿标）
-        folium.Marker(
+    folium.Marker(
             location=st.session_state.start_point,
             popup="A点（起点，校内）",
             icon=folium.Icon(color="red", icon="location-dot")
